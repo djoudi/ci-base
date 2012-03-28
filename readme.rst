@@ -1,8 +1,8 @@
-###################
-What is CodeIgniter
-###################
+###############
+What is ci-base
+###############
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
+ci-base is a CodeIgniter Application Development Framework - a toolkit - for people
 who build web sites using PHP. Its goal is to enable you to develop projects
 much faster than you could if you were writing code from scratch, by providing
 a rich set of libraries for commonly needed tasks, as well as a simple
@@ -14,13 +14,13 @@ for a given task.
 Release Information
 *******************
 
-This repo contains in development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<http://codeigniter.com/downloads/>`_ page.
+This repo contains user-defined Codeigniter base template.
 
-**************************
-Changelog and New Features
-**************************
+********
+Features
+********
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/EllisLab/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+-  CodeIgniter 2.1
+-  jQuery 1.7.1.min.js
+-  Modernizr 2.5.3.min.js
+-  HTML5 Boiler Plate
