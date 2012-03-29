@@ -16,11 +16,13 @@ class Home extends CI_Controller
 		$this->load->view('template', $data);
    }
 	
+	/*
 	public function create()
 	{
 		// create a new user
 		$this->simpleloginsecure->create('almeralmazan@gmail.com', 'almerboy');
-	}
+	}*/
+	
 	
 	public function login()
 	{
