@@ -23,6 +23,16 @@ class Home extends CI_Controller
 		$this->simpleloginsecure->create('almeralmazan@gmail.com', 'almerboy');
 	}*/
 	
+	public function admin()
+	{
+		// check if logged in
+      if($this->session->userdata('logged_in')) 
+      {
+          // logged in
+         $data = $this->_arrayValue('admin_view', 'Admin', 'private');
+         $this->load->view('template', $data);
+      }
+	}
 	
 	public function login()
 	{
@@ -31,13 +41,7 @@ class Home extends CI_Controller
 		
 		if($this->simpleloginsecure->login($username, $password))
 		{
-			// check if logged in
-			if($this->session->userdata('logged_in')) 
-			{
-			    // logged in
-				$data = $this->_arrayValue('admin_view', 'Admin', 'private');
-			   $this->load->view('template', $data);
-			}
+			$this->admin();
 		}
 		else
 		{
