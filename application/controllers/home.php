@@ -5,8 +5,6 @@ class Home extends CI_Controller
    public function __construct()
    {
       parent::__construct();
-		
-		// load the library
 		$this->load->library('SimpleLoginSecure');
    }
   
@@ -15,14 +13,7 @@ class Home extends CI_Controller
       $data = $this->_arrayValue('home_view', 'Home');
 		$this->load->view('template', $data);
    }
-	
-	/*
-	public function create()
-	{
-		// create a new user
-		$this->simpleloginsecure->create('almeralmazan@gmail.com', 'almerboy');
-	}*/
-	
+   	
 	public function admin()
 	{
 		// check if logged in
@@ -39,7 +30,9 @@ class Home extends CI_Controller
 		$username = $_POST['username'];
 		$password = $_POST['password'];
 		
-		if($this->simpleloginsecure->login($username, $password))
+      $loginInfo = $this->simpleloginsecure->login($username, $password);
+      
+		if( $loginInfo )
 		{
 			$this->admin();
 		}
@@ -51,10 +44,8 @@ class Home extends CI_Controller
 	
 	public function logout()
 	{
-		// logout
 		$this->simpleloginsecure->logout();
-		$data = $this->_arrayValue('home_view', 'Home');
-		$this->load->view('template', $data);
+      $this->index();
 	}
 
 	private function _arrayValue($view_page, $title, $access_modifier = 'public')

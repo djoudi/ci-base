@@ -37,5 +37,16 @@ define('FOPEN_WRITE_CREATE_STRICT',				'xb');
 define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 
 
+
+/*
+|--------------------------------------------------------------------------
+| Detect Ajax Requests
+|--------------------------------------------------------------------------
+|
+| This constant is used to determine whether the request is an AJAX request, or a standard HTTP request.
+|
+*/
+define('IS_AJAX', isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest');
+
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */
