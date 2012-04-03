@@ -23,4 +23,5 @@ Features
 -  CodeIgniter 2.1
 -  jQuery 1.7.1.min.js
 -  Modernizr 2.5.3.min.js
--  HTML5 Boiler Plate
+-  CodeIgniter-jQuery-Ajax
+-  Grocery-CRUD
